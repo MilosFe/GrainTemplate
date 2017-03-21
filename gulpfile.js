@@ -46,6 +46,7 @@ gulp.task('sass', function () {
         }));
 });
 
+
 gulp.task('vet', function () {
     return gulp.src(['app/js/*.js',
                   './*.js'])

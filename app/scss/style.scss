@@ -1,86 +1,121 @@
-@import "mixins.scss";
-@import "global.scss";
-@import "typography.scss";
-@import "grid.scss";
-@import "font-awsome.scss";
+/*
+DMS TEST
+Copyright: Radoman Milos
+Date: Feb, 2017
+Author: Radoman Milos
+CSS methodology: BEM
+File and folder structure: SMACSS
+
+Note: follow folder and file structure, respect methodology!
+*/
+@charset "UTF-8";
+
+@import "_base/_reset.scss";
+@import "_base/_elements";
+@import "_base/_grid";
+@import "_font/fonts";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $white-font-clr;
+  color:  white;
+  font-family: 'proxima_nova_rgregular';
+  font-size: $base-font-size;
+  line-height: 1.375em;
+  overflow-x: hidden;
+}
 
 /* ==========================================================================
-   Header Styless
+   Buttons
+   ========================================================================== */
+
+/* ==========================================================================
+   Header
    ========================================================================== */
 
 header {
-    width: 100%;
-    background-color: white;
-    border-bottom: 1px solid $grey;
-    height: em(80px, $browser-default);
-    .logo {
-        color: #8c8c8c;
-        font-weight: bold;
-        font-size: 1.5em;
-        float: left;
-        line-height: em(50px, $browser-default);
-        position: relative;
-        span {
-            color: #179BD7;
-            transition: color 0.5s ease;
-        }
-    }
-    .fa-bars {
-        display: none;
-        float: right;
-        font-size: 1.5em;
-        line-height: em(50px, $browser-default);
-        color: grey;
-        cursor: pointer;
-        @include media($mobile-lg) {
-            display: block;
-        }
-    }
-    ul {
-        list-style: none;
-        float: right;
-        @include media($mobile-lg) {
-            position: absolute;
-            display: none;
-            width: 100%;
-            background: white;
-            top: em(80px, $browser-default);
-            left: 0;
-        }
-        li {
-            display: inline-block;
-            display: inline;
-            @include media($mobile-lg) {
-                display: block;
-            }
-            a {
-                text-decoration: none;
-                float: left;
-                display: inline-block;
-                line-height: em(80px, $browser-default);
-                margin-left: 1em;
-                color: $grey;
-                font-weight: bold;
-                transition: color 1s ease;
-                &:hover {
-                    color: #179BD7;
-                }
-                @include media($mobile-lg) {
-                    float: none;
-                    display: block;
-                    text-align: center;
-                    margin: 0;
-                    padding: 0;
-                    border-bottom: 1px solid grey;
-                    line-height: 4em;
-                }
-            }
-        }
-    }
+  width: 100%;
+  position: relative;
+  background: linear-gradient(#5726c0, #9a36b5);
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  height: em(180px, $base-font-size);
+  .header__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
 }
-.hero {
+
+.section__people {
+  margin-top: em(20px, $base-font-size);
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  @include  media(600px){
+
+  }
+}
+.card {
+  width: 33.333333%;
+  @include media(700px){
+       width: 50%;
+     }
+}
+.card__wrapper   {
+
+  margin: 0 8px 16px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
+  display: block;
+  min-height: 400px;
+}
+
+.card__heading {
+  background: url(https://robohash.org/reiciendisquaequos.png?size=300x300&set=set1) center center;
+  background-size: cover;
+
+   @include mod(overlay){
+     padding: 16px;
+     min-height: 320px;
+     background: linear-gradient(rgba(87, 38, 192, 0.74), rgba(154, 54, 181, 0.74));
+   }
+  .heading__name {
+    font-size: em(28px, $base-font-size);
+  }
+  .card__image--profile {
+    border-radius: 50%;
+    border: 8px solid white;
+    height: 110px;
+    width: 110px;
+    display: block;
+    margin:em(16px, $base-font-size) auto;
+  }
+
+
+}
+.hr {
+  @include elm(divider){
+    background-color: white;
     width: 100%;
-    height: 600px;
-    background-color: $grey;
-    margin-bottom: 200px;
+    height: 1px;
+  }
+}
+
+button{
+  font-size: 16px;
+  text-decoration:none;
+  border: 1px solid rgba(255,255,255,0);
+  border-radius: 13px;
+  text-transform: uppercase;
+  color: white;
+  background-color:$dark-purple;
+  width: 135px;
+  height: 25px;
+  cursor: pointer;
+  margin:0 8px;
 }
