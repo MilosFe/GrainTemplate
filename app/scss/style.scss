@@ -1,24 +1,24 @@
-@import "mixins.scss";
-@import "global.scss";
-@import "typography.scss";
-@import "grid.scss";
-@import "font-awsome.scss";
+@import "_base/_reset";
+@import "_base/_elements";
+@import "_base/_grid";
+@import "_base/typography";
+
 
 /* ==========================================================================
-   Header Styless
+   Header Style's
    ========================================================================== */
 
 header {
     width: 100%;
     background-color: white;
     border-bottom: 1px solid $grey;
-    height: em(80px, $browser-default);
+    height: em(80px, $base-font-size );
     .logo {
         color: #8c8c8c;
         font-weight: bold;
         font-size: 1.5em;
         float: left;
-        line-height: em(50px, $browser-default);
+        line-height: em(50px, $base-font-size);
         position: relative;
         span {
             color: #179BD7;
@@ -29,7 +29,7 @@ header {
         display: none;
         float: right;
         font-size: 1.5em;
-        line-height: em(50px, $browser-default);
+        line-height: em(50px, $base-font-size);
         color: grey;
         cursor: pointer;
         @include media($mobile-lg) {
@@ -44,7 +44,7 @@ header {
             display: none;
             width: 100%;
             background: white;
-            top: em(80px, $browser-default);
+            top: em(80px, $base-font-size);
             left: 0;
         }
         li {
@@ -57,7 +57,7 @@ header {
                 text-decoration: none;
                 float: left;
                 display: inline-block;
-                line-height: em(80px, $browser-default);
+                line-height: em(80px, $base-font-size);
                 margin-left: 1em;
                 color: $grey;
                 font-weight: bold;
