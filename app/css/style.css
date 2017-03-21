@@ -1,5 +1,5 @@
 /*
-DMS TEST
+HTML 5 FRAMEWORK
 Copyright: Radoman Milos
 Date: Feb, 2017
 Author: Radoman Milos
@@ -55,7 +55,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.wrapper:after {
+.row:after {
   content: "";
   display: table;
   clear: both; }
@@ -91,6 +91,83 @@ p {
   width: 90%;
   margin: 0 auto; }
 
+.column {
+  position: relative;
+  float: left;
+  display: block;
+  padding: 5px;
+  min-height: 30px;
+  text-align: center; }
+
+.row {
+  margin-bottom: 10px; }
+
+.row:last-child {
+  margin-bottom: 0; }
+
+.column + .column {
+  margin-left: 1.6%; }
+
+.column-1 {
+  width: 6.86667%; }
+
+.column-2 {
+  width: 15.33333%; }
+
+.column-3 {
+  width: 23.8%; }
+
+.column-4 {
+  width: 32.26667%; }
+
+.column-5 {
+  width: 40.73333%; }
+
+.column-6 {
+  width: 49.2%; }
+
+.column-7 {
+  width: 57.66667%; }
+
+.column-8 {
+  width: 66.13333%; }
+
+.column-9 {
+  width: 74.6%; }
+
+.column-10 {
+  width: 83.06667%; }
+
+.column-11 {
+  width: 91.53333%; }
+
+.column-12 {
+  width: 100%; }
+
+@media only screen and (max-width: 37.5em) {
+  .column-1,
+  .column-2,
+  .column-3,
+  .column-4,
+  .column-5,
+  .column-6,
+  .column-7,
+  .column-8,
+  .column-9,
+  .column-10,
+  .column-11,
+  .column-12 {
+    width: auto;
+    float: none; }
+  .column + .column {
+    margin-left: 0; }
+  .row {
+    margin-bottom: 0; }
+  .column {
+    margin-bottom: 10px; }
+  .row:last-child .column:last-child {
+    margin-bottom: 0; } }
+
 @font-face {
   font-family: 'proxima_nova_rgbold';
   src: url("/fonts/proximanova-bold-webfont.woff2") format("woff2"), url("/fonts/proximanova-bold-webfont.woff") format("woff"), url("/fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold") format("svg");
@@ -120,80 +197,73 @@ body {
   line-height: 1.375em;
   overflow-x: hidden; }
 
-/* ==========================================================================
-   Buttons
-   ========================================================================== */
-/* ==========================================================================
-   Header
-   ========================================================================== */
 header {
   width: 100%;
-  position: relative;
-  background: -webkit-linear-gradient(#5726c0, #9a36b5);
-  background: linear-gradient(#5726c0, #9a36b5);
-  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
-  height: 11.25em; }
-  header .header__logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
-
-.section__people {
-  margin-top: 1.25em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  text-align: center; }
-
-.card {
-  width: 33.333333%; }
-  @media only screen and (max-width: 700px) {
-    .card {
-      width: 50%; } }
-
-.card__wrapper {
-  margin: 0 8px 16px;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  background-color: #FFFFFF;
-  display: block;
-  min-height: 400px; }
-
-.card__heading {
-  background: url(https://robohash.org/reiciendisquaequos.png?size=300x300&set=set1) center center;
-  background-size: cover; }
-  .card__heading--overlay {
-    padding: 16px;
-    min-height: 320px;
-    background: -webkit-linear-gradient(rgba(87, 38, 192, 0.74), rgba(154, 54, 181, 0.74));
-    background: linear-gradient(rgba(87, 38, 192, 0.74), rgba(154, 54, 181, 0.74)); }
-  .card__heading .heading__name {
-    font-size: 1.75em; }
-  .card__heading .card__image--profile {
-    border-radius: 50%;
-    border: 8px solid white;
-    height: 110px;
-    width: 110px;
-    display: block;
-    margin: 1em auto; }
-
-.hr__divider {
   background-color: white;
-  width: 100%;
-  height: 1px; }
+  border-bottom: 1px solid #8c8c8c;
+  height: 5em; }
+  header .logo {
+    color: #8c8c8c;
+    font-weight: bold;
+    font-size: 1.5em;
+    float: left;
+    line-height: 3.125em;
+    position: relative; }
+    header .logo span {
+      color: #179BD7;
+      -webkit-transition: color 0.5s ease;
+      transition: color 0.5s ease; }
+  header .fa-bars {
+    display: none;
+    float: right;
+    font-size: 1.5em;
+    line-height: 3.125em;
+    color: grey;
+    cursor: pointer; }
+    @media only screen and (max-width: 37.5em) {
+      header .fa-bars {
+        display: block; } }
+  header ul {
+    list-style: none;
+    float: right; }
+    @media only screen and (max-width: 37.5em) {
+      header ul {
+        position: absolute;
+        display: none;
+        width: 100%;
+        background: white;
+        top: 5em;
+        left: 0; } }
+    header ul li {
+      display: inline-block;
+      display: inline; }
+      @media only screen and (max-width: 37.5em) {
+        header ul li {
+          display: block; } }
+      header ul li a {
+        text-decoration: none;
+        float: left;
+        display: inline-block;
+        line-height: 5em;
+        margin-left: 1em;
+        color: #8c8c8c;
+        font-weight: bold;
+        -webkit-transition: color 1s ease;
+        transition: color 1s ease; }
+        header ul li a:hover {
+          color: #179BD7; }
+        @media only screen and (max-width: 37.5em) {
+          header ul li a {
+            float: none;
+            display: block;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid grey;
+            line-height: 4em; } }
 
-button {
-  font-size: 16px;
-  text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0);
-  border-radius: 13px;
-  text-transform: uppercase;
-  color: white;
-  background-color: #5726c0;
-  width: 135px;
-  height: 25px;
-  cursor: pointer;
-  margin: 0 8px; }
+.hero {
+  width: 100%;
+  height: 600px;
+  background-color: #8c8c8c;
+  margin-bottom: 200px; }
