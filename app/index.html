@@ -1,7 +1,10 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="">
 <!--<![endif]-->
@@ -15,31 +18,74 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
     <!--build:css css/styles.min.css-->
-    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- endbuild -->
 </head>
 <!--[if lt IE 9]>
-    <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <![endif]-->
+<script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<![endif]-->
+
 <body>
-    <header>
-        <div class="wrapper">
-            <p class="logo">Milos<span>R</span></p>
-            <i class="fa fa-bars"></i>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                
-            </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <header id="home">
+            <div class="container">
+                <div>
+                    <span class="logo">Milos<span>R</span></span>
+                    <i class="fa fa-bars"></i>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="hero-logo">
+            <h1>Milos</h1>
         </div>
-    </header>
-    <div class="hero">
-    </div>
+    </section>
+    <!-- End of Hero Section -->
+    <section class="profesinal-info">
+        <div class="profesinal-info_content container">
+            <div class="row">
+                <div class="info-block column column-4">
+                    <h3 class="profesinal-info_heading"> I'm Frontend Developer</h3>
+                    <span class="profesinal-info_sub_heading">
+                       I code beautiful things
+                    </span>
+                    <p>
+                        My name is Milos, I'm profesional frontend devleoper. I make beautiful website on Angular framework
+                    </p>
+                </div>
+            </div>
+            <div class="profesinal-info_biography">
+                <div class="row">
+                    <div class="column column-6">
+                        <h3 class="profesinal-info_heading"> Profesional Bigraphy</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maiores, molestiae ad architecto? Laborum quo, perferendis pariatur aut fuga consectetur quasi recusandae molestias accusantium sunt quisquam, suscipit autem commodi
+                            vero!
+                        </p>
+                    </div>
+                    <div class="column column-6">
+                        <h3 class="profesinal-info_heading"> Techhnology Used</h3>
+                        <ul>
+                            <li>Javascript</li>
+                            <li>AngularJs</li>
+                            <li>NodeJs</li>
+                            <li>Php</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
     <!--build:js js/main.min.js -->
     <script src="js/vendor/jquery-1.11.2.js"></script>
     <script src="js/main.js"></script>
