@@ -1,6 +1,5 @@
-# HTML5-framework
-HTML5 framework for new projects, built with gulp.
+# GRAIN TEMPLATE
+Testing ground for GRAIN TEMPLATE
 
 #Description
-
-No one likes to start new projects with blank files.
+Simple HTML5 grain template based on personal design and trys
