@@ -2574,9 +2574,8 @@ small, .font_small {
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/hero.jpg") 100% 100% no-repeat;
   background-size: cover;
-  position: relative;
   display: block;
-  min-height: 600px; }
+  min-height: 700px; }
 
 .hero-logo {
   position: relative;
@@ -2584,8 +2583,7 @@ small, .font_small {
   text-align: center; }
 
 .hero-center {
-  display: block;
-  position: relative; }
+  display: block; }
 
 header {
   width: 100%;
@@ -2601,7 +2599,10 @@ header {
     position: relative; }
     header .logo span {
       color: darkred;
-      transition: color 0.5s ease; }
+      border: 1px solid darkred;
+      transition: color 0.5s ease;
+      margin-left: 0.2em;
+      padding: 1px; }
   header .fa-bars {
     display: none;
     float: right;
@@ -2613,7 +2614,8 @@ header {
         display: block; } }
   header ul {
     list-style: none;
-    float: right; }
+    float: right;
+    background: transparent; }
     @media only screen and (max-width: 48em) {
       header ul {
         position: absolute;
@@ -2648,28 +2650,65 @@ header {
             border-bottom: 1px solid grey;
             line-height: 4em; } }
 
+.profesinal-info_content:after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: white;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -20px;
+  box-shadow: inset 0px 0px 17px -5px rgba(0, 0, 0, 0.75); }
+
 .profesinal-info {
-  background: grey;
-  min-height: 700px;
-  text-align: center; }
+  background: grey url("../images/squared_metal.png"); }
 
 .profesinal-info_content {
   position: relative;
-  top: -400px;
+  top: -500px;
   color: white;
-  box-shadow: 0px 0px 27px 2px rgba(0, 0, 0, 0.75);
-  padding-bottom: 20%; }
-  .profesinal-info_content .column {
-    text-align: center; }
+  box-shadow: 0px 0px 27px 2px rgba(0, 0, 0, 0.75); }
+
+.profesinal-info_content:after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  background: url("../images/squared_metal.png");
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -20px;
+  box-shadow: 0px 0px 0px -5px rgba(0, 0, 0, 0.75); }
 
 .profesinal-info_content-background {
-  background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 0%, rgba(99, 138, 172, 0) 33%, #2d2c32 100%); }
+  background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 0%, rgba(99, 138, 172, 0) 80%, #2d2c32 100%);
+  padding-bottom: 2.5em; }
 
 .info-block {
-  padding: 3em 0; }
+  padding: 3em; }
 
 .profesinal-info_biography {
   padding: 3em 5em;
-  background: #2c2d31;
   position: relative;
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+  background: #2c2d31; }
+  .profesinal-info_biography .column {
+    padding: 15px; }
+  .profesinal-info_biography .column:nth-child(even) {
+    text-align: left; }
+  .profesinal-info_biography .column:nth-child(odd) {
+    text-align: right; }
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50px;
+  display: inline-block;
+  margin-right: 5px; }
