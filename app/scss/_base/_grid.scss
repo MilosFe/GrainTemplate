@@ -16,7 +16,7 @@
 }
 
 .row {
-    margin-bottom: 10px;
+    margin-bottom: 5%;
     @extend %clearfix;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .column+.column {
-    margin-left: 1.4%;
+    margin-left: 1.6%;
 }
 
 @for $i from 1 through 12 {
