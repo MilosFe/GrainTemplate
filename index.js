@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/app'));
-app.set('port', (process.env.PORT || 6000));
+app.set('port', (process.env.PORT || 5000));
 app.set('app', __dirname + '/app');
 
 
