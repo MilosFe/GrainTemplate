@@ -1,5 +1,8 @@
     .profesinal-info {
         background: grey url('../images/squared_metal.png');
+        position: relative;
+        margin-bottom: -200px;
+        z-index: 300000;
     }
     
     .profesinal-info_content {
@@ -76,6 +79,21 @@
         display: block;
         height: auto;
         @extend %clearfix;
+    }
+    
+    .portfolio_container:after {
+        content: '';
+        z-index: 10001;
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background: black;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -100px;
+        box-shadow: 3px 3px 3px -5px rgba(0, 0, 0, 0.75);
     }
     
     .portfolio-grid {
